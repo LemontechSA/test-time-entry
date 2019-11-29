@@ -26,8 +26,8 @@ const TimerIcon: React.FC<Props> = ({
     }
 
     const interval = setInterval(() => {
-      setPosition(position === 315 ? 0 : position + 45);
-    }, 1000);
+      setPosition(position === 360 ? 0 : position + 1);
+    }, 1000 / 360);
 
     return () => clearInterval(interval);
   }, [position]);

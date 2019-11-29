@@ -2880,8 +2880,8 @@ var TimerIcon = function (_a) {
             return;
         }
         var interval = setInterval(function () {
-            setPosition(position === 315 ? 0 : position + 45);
-        }, 1000);
+            setPosition(position === 360 ? 0 : position + 1);
+        }, 1000 / 360);
         return function () { return clearInterval(interval); };
     }, [position]);
     return (React.createElement("svg", __assign({}, props, { height: size, viewBox: "0 0 64 64", width: size }),
@@ -2894,16 +2894,17 @@ TimerIcon.defaultProps = {
     defaultPosition: 0,
     size: 16
 };
-//# sourceMappingURL=TimerIcon.js.map
 
 var MAX_ENTRY_HEIGHT = 500;
 var MIN_ENTRY_HEIGHT = 40;
+//# sourceMappingURL=constants.js.map
 
 var getEntryHeight = (function (duration) {
     var height = duration / ((14 * 60) / (MAX_ENTRY_HEIGHT - MIN_ENTRY_HEIGHT)) +
         MIN_ENTRY_HEIGHT;
     return Math.max(height, MIN_ENTRY_HEIGHT);
 });
+//# sourceMappingURL=getEntryHeight.js.map
 
 var TimeEntry = function (props) {
     var _a;
@@ -2931,6 +2932,7 @@ TimeEntry.defaultProps = {
 var TimeEntry$1 = uncontrollable(TimeEntry, {
     active: "onActiveChange"
 });
+//# sourceMappingURL=TimeEntry.js.map
 
 //# sourceMappingURL=index.js.map
 
