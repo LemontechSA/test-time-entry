@@ -1,0 +1,8 @@
+{
+  "short_name": "@lemontech/test-time-entry",
+  "name": "@lemontech/test-time-entry",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
