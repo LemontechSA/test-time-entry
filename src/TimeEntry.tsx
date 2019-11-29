@@ -42,7 +42,7 @@ const TimeEntry: React.FC<Props> = props => {
       onMouseLeave={() => setHover(false)}
       style={{
         height: getEntryHeight(duration),
-        backgroundColor: color
+        backgroundColor: active ? undefined : color
       }}
     >
       <div className={css.project}>{project}</div>

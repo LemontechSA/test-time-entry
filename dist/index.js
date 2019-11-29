@@ -2009,7 +2009,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css$1 = ".styles_container__2pRR5 {\n  background-color: #2a3893;\n  color: #fff;\n  padding: 8px;\n  font-size: 12px;\n  display: flex;\n  flex-direction: column;\n  border-radius: 4px;\n  width: 240px;\n  height: 80px;\n}\n\n.styles_project__3GAka,\n.styles_duration__2Y4KO {\n  flex-shrink: 0;\n}\n\n.styles_project__3GAka {\n  margin-bottom: 4px;\n}\n\n.styles_description__2yQPI {\n  margin-bottom: 8px;\n  opacity: 0.75;\n  flex: 1;\n  min-height: 0;\n  overflow: hidden;\n}\n\n.styles_footer__k4FgR {\n  margin-top: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO {\n  font-size: 14px;\n  margin-right: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO svg {\n  margin-right: 4px;\n}\n\n.styles_container__2pRR5.styles_active__3G4VH {\n  background-color: #84a2b7;\n}\n";
+var css$1 = ".styles_container__2pRR5 {\n  background-color: #2a3893;\n  color: #fff;\n  padding: 8px;\n  font-size: 12px;\n  display: flex;\n  flex-direction: column;\n  border-radius: 4px;\n  width: 240px;\n  height: 80px;\n  transition: background-color 200ms ease-out;\n}\n\n.styles_project__3GAka,\n.styles_duration__2Y4KO {\n  flex-shrink: 0;\n}\n\n.styles_project__3GAka {\n  margin-bottom: 4px;\n}\n\n.styles_description__2yQPI {\n  margin-bottom: 8px;\n  opacity: 0.75;\n  flex: 1;\n  min-height: 0;\n  overflow: hidden;\n}\n\n.styles_footer__k4FgR {\n  margin-top: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO {\n  font-size: 14px;\n  margin-right: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO svg {\n  margin-right: 4px;\n}\n\n.styles_container__2pRR5.styles_active__3G4VH {\n  background-color: #84a2b7;\n}\n";
 var css$2 = {"container":"styles_container__2pRR5","project":"styles_project__3GAka","duration":"styles_duration__2Y4KO","description":"styles_description__2yQPI","footer":"styles_footer__k4FgR","active":"styles_active__3G4VH"};
 styleInject(css$1);
 
@@ -2901,6 +2901,7 @@ TimerIcon.defaultProps = {
     defaultPosition: 0,
     size: 16
 };
+//# sourceMappingURL=TimerIcon.js.map
 
 var MAX_ENTRY_HEIGHT = 500;
 var MIN_ENTRY_HEIGHT = 40;
@@ -2915,12 +2916,13 @@ var getEntryHeight = (function (duration) {
 
 var TimeEntry = function (props) {
     var _a;
-    var _b = props, description = _b.description, duration = _b.duration, project = _b.project, active = _b.active, onActiveChange = _b.onActiveChange;
+    var _b = props, color = _b.color, description = _b.description, duration = _b.duration, project = _b.project, active = _b.active, onActiveChange = _b.onActiveChange;
     var _c = React.useState(false), hover = _c[0], setHover = _c[1];
     return (React__default.createElement("div", { className: classnames(css$2.container, (_a = {},
             _a[css$2.active] = active,
             _a)), onMouseEnter: function () { return setHover(true); }, onMouseLeave: function () { return setHover(false); }, style: {
-            height: getEntryHeight(duration)
+            height: getEntryHeight(duration),
+            backgroundColor: active ? undefined : color
         } },
         React__default.createElement("div", { className: css$2.project }, project),
         React__default.createElement("div", { className: css$2.description }, description),
