@@ -8,6 +8,44 @@ var React = require('react');
 var React__default = _interopDefault(React);
 var PropTypes = _interopDefault(require('prop-types'));
 
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function createCommonjsModule(fn, module) {
@@ -2009,7 +2047,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css$1 = ".styles_container__2pRR5 {\n  background-color: #2a3893;\n  color: #fff;\n  padding: 8px;\n  font-size: 12px;\n  display: flex;\n  flex-direction: column;\n  border-radius: 4px;\n  transition: background-color 200ms ease-out;\n}\n\n.styles_project__3GAka,\n.styles_duration__2Y4KO {\n  flex-shrink: 0;\n}\n\n.styles_project__3GAka {\n  margin-bottom: 4px;\n}\n\n.styles_description__2yQPI {\n  margin-bottom: 8px;\n  opacity: 0.75;\n  flex: 1;\n  min-height: 0;\n  overflow: hidden;\n}\n\n.styles_footer__k4FgR {\n  margin-top: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO {\n  font-size: 14px;\n  margin-right: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO svg {\n  margin-right: 4px;\n}\n\n.styles_container__2pRR5.styles_active__3G4VH {\n  background-color: #84a2b7;\n}\n";
+var css$1 = ".styles_container__2pRR5 {\n  background-color: #2a3893;\n  color: #fff;\n  padding: 8px;\n  font-size: 12px;\n  display: flex;\n  flex-direction: column;\n  border-radius: 4px;\n  transition: background-color 200ms ease-out;\n  width: 100%;\n}\n\n.styles_project__3GAka,\n.styles_duration__2Y4KO {\n  flex-shrink: 0;\n}\n\n.styles_project__3GAka {\n  margin-bottom: 4px;\n}\n\n.styles_description__2yQPI {\n  margin-bottom: 8px;\n  opacity: 0.75;\n  flex: 1;\n  min-height: 0;\n  overflow: hidden;\n}\n\n.styles_footer__k4FgR {\n  margin-top: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO {\n  font-size: 14px;\n  margin-right: auto;\n  display: flex;\n  align-items: center;\n}\n\n.styles_duration__2Y4KO svg {\n  margin-right: 4px;\n}\n\n.styles_container__2pRR5.styles_active__3G4VH {\n  background-color: #84a2b7;\n}\n";
 var css$2 = {"container":"styles_container__2pRR5","project":"styles_project__3GAka","duration":"styles_duration__2Y4KO","description":"styles_description__2yQPI","footer":"styles_footer__k4FgR","active":"styles_active__3G4VH"};
 styleInject(css$1);
 
@@ -2841,44 +2879,6 @@ var convert$1 = {
 };
 //# sourceMappingURL=convert.js.map
 
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-function __rest(s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-}
-
 var TimerIcon = function (_a) {
     var animate = _a.animate, defaultPosition = _a.defaultPosition, size = _a.size, props = __rest(_a, ["animate", "defaultPosition", "size"]);
     var _b = React.useState(defaultPosition), position = _b[0], setPosition = _b[1];
@@ -2916,14 +2916,11 @@ var getEntryHeight = (function (duration) {
 
 var TimeEntry = function (props) {
     var _a;
-    var _b = props, color = _b.color, description = _b.description, duration = _b.duration, project = _b.project, active = _b.active, onActiveChange = _b.onActiveChange;
+    var _b = props, color = _b.color, description = _b.description, duration = _b.duration, project = _b.project, active = _b.active, onActiveChange = _b.onActiveChange, style = _b.style, className = _b.className, otherProps = __rest(_b, ["color", "description", "duration", "project", "active", "onActiveChange", "style", "className"]);
     var _c = React.useState(false), hover = _c[0], setHover = _c[1];
-    return (React__default.createElement("div", { className: classnames(css$2.container, (_a = {},
+    return (React__default.createElement("div", __assign({}, otherProps, { className: classnames(css$2.container, className, (_a = {},
             _a[css$2.active] = active,
-            _a)), onMouseEnter: function () { return setHover(true); }, onMouseLeave: function () { return setHover(false); }, style: {
-            height: getEntryHeight(duration),
-            backgroundColor: active ? undefined : color
-        } },
+            _a)), onMouseEnter: function () { return setHover(true); }, onMouseLeave: function () { return setHover(false); }, style: __assign({}, style, { height: getEntryHeight(duration), backgroundColor: active ? undefined : color }) }),
         React__default.createElement("div", { className: css$2.project }, project),
         React__default.createElement("div", { className: css$2.description }, description),
         React__default.createElement("div", { className: css$2.footer },
