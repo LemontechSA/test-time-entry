@@ -1,8 +1,49 @@
-/* add css styles here (optional) */
+.container {
+  background-color: #2a3893;
+  color: #fff;
+  padding: 8px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 240px;
+  height: 80px;
+}
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.project,
+.duration {
+  flex-shrink: 0;
+}
+
+.project {
+  margin-bottom: 4px;
+}
+
+.description {
+  margin-bottom: 8px;
+  opacity: 0.75;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.duration {
+  font-size: 14px;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.duration svg {
+  margin-right: 4px;
+}
+
+.container.active {
+  background-color: #84a2b7;
 }
