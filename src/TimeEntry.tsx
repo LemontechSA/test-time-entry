@@ -6,6 +6,7 @@ import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import css from "./styles.css";
 import convert from "./convert";
 import TimerIcon from "./TimerIcon";
+import getEntryHeight from "./getEntryHeight";
 
 export type Props = {
   active?: boolean;
@@ -37,6 +38,9 @@ const TimeEntry: React.FC<Props> = props => {
       })}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      style={{
+        height: getEntryHeight(duration)
+      }}
     >
       <div className={css.project}>{project}</div>
       <div className={css.description}>{description}</div>

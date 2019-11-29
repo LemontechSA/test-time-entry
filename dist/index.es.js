@@ -2832,6 +2832,7 @@ var convert$1 = {
     duration: function (duration) { return new Duration(duration); },
     time: function (time) { return new Time(time); }
 };
+//# sourceMappingURL=convert.js.map
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -2893,6 +2894,16 @@ TimerIcon.defaultProps = {
     defaultPosition: 0,
     size: 16
 };
+//# sourceMappingURL=TimerIcon.js.map
+
+var MAX_ENTRY_HEIGHT = 500;
+var MIN_ENTRY_HEIGHT = 40;
+
+var getEntryHeight = (function (duration) {
+    var height = duration / ((14 * 60) / (MAX_ENTRY_HEIGHT - MIN_ENTRY_HEIGHT)) +
+        MIN_ENTRY_HEIGHT;
+    return Math.max(height, MIN_ENTRY_HEIGHT);
+});
 
 var TimeEntry = function (props) {
     var _a;
@@ -2900,7 +2911,9 @@ var TimeEntry = function (props) {
     var _c = useState(false), hover = _c[0], setHover = _c[1];
     return (React.createElement("div", { className: classnames(css$2.container, (_a = {},
             _a[css$2.active] = active,
-            _a)), onMouseEnter: function () { return setHover(true); }, onMouseLeave: function () { return setHover(false); } },
+            _a)), onMouseEnter: function () { return setHover(true); }, onMouseLeave: function () { return setHover(false); }, style: {
+            height: getEntryHeight(duration)
+        } },
         React.createElement("div", { className: css$2.project }, project),
         React.createElement("div", { className: css$2.description }, description),
         React.createElement("div", { className: css$2.footer },
@@ -2918,6 +2931,8 @@ TimeEntry.defaultProps = {
 var TimeEntry$1 = uncontrollable(TimeEntry, {
     active: "onActiveChange"
 });
+
+//# sourceMappingURL=index.js.map
 
 export { TimeEntry$1 as TimeEntry, TimerIcon };
 //# sourceMappingURL=index.es.js.map
