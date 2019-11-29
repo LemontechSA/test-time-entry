@@ -10,6 +10,7 @@ import getEntryHeight from "./getEntryHeight";
 
 export type Props = {
   active?: boolean;
+  color?: string;
   description?: string;
   duration: number;
   onActiveChange?: (active: boolean) => void;
@@ -23,6 +24,7 @@ type ControlledProps = {
 
 const TimeEntry: React.FC<Props> = props => {
   const {
+    color,
     description,
     duration,
     project,
@@ -39,7 +41,8 @@ const TimeEntry: React.FC<Props> = props => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
-        height: getEntryHeight(duration)
+        height: getEntryHeight(duration),
+        backgroundColor: color
       }}
     >
       <div className={css.project}>{project}</div>
